@@ -90,6 +90,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Capitulo 1 - Aula 04 -->
+		<dependency>
+                	<groupId>org.springframework.boot</groupId>
+            		<artifactId>spring-boot-starter-actuator</artifactId>
+        	</dependency>
+                <!-- Capitulo 1 - Aula 05 -->
+        	<dependency>
+            		<groupId>io.micrometer</groupId>
+            		<artifactId>micrometer-registry-prometheus</artifactId>
+        	</dependency>  
+        
 	</dependencies>
 
 	<build>
