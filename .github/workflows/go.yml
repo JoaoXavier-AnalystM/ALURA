@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go_version: ['1.18', '1.17', '>=1.18']
+        go_version: ['1.18', '1.20', '>=1.20']
     steps:
     - uses: actions/checkout@v3
 
@@ -31,7 +31,7 @@ jobs:
       run: docker-compose up -d
 
     - name: Test
-      run: go test -v main_test.go
+      run: go test -v main_test.go 
       
   
   build:
