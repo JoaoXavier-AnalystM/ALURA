@@ -2,8 +2,17 @@
 # Local .terraform directories
 **/.terraform/*
 
+### SSH ###
+**/.ssh/id_*
+**/.ssh/*_id_*
+**/.ssh/known_hosts
+
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
 
+*.pub
 *.pem
+*.ppk
+*.key
