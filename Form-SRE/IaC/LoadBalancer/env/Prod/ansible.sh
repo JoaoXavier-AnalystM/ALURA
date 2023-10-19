@@ -1,13 +1,8 @@
 #!/bin/bash
 cd /home/ubuntu
-#instala o pip
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip-py
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo python3 get-pip.py
-
-#instala ansible
 sudo python3 -m pip install ansible
-
-#exec playbook
 tee -a playbook.yml > /dev/null <<EOT
 - hosts: localhost
   tasks:
