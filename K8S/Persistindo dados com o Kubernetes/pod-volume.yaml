@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-volume
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+      volumeMounts:
+        - mountPath: /pasta-de-arquivos
+          name: volume-pod
+    - name: jenkins-container
+      image: jenkins/jenkins:2.426.1-lts-alpine
+      volumeMounts:
+        - mountPath: /pasta-de-arquivos
+          name: volume-pod      
+  volumes:
+    - name: volume-pod
+      hostPath:
+        path: /D/GitHub/ALURA/K8S/Persistindo dados com o Kubernetes
+        type: Directory
